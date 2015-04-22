@@ -9,3 +9,5 @@ filetype plugin indent on
 " close vim if the nerdtree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" ctrl + n = nerdtree open
+map <C-n> :NERDTreeToggle<CR>
