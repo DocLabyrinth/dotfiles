@@ -11,3 +11,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " ctrl + n = nerdtree open
 map <C-n> :NERDTreeToggle<CR>
+
+" automatically remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
