@@ -35,9 +35,19 @@ mkdir -p ~/Virtualenvs
 # rbenv and rub(y/ies)
 sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
 test -d ~/.rbenv || git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-test -d ~/.rbenv/plugins/ruby-build || git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build 
+test -d ~/.rbenv/plugins/ruby-build || git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 source ~/.zshrc
 rbenv global 2.1.2 || rbenv install 2.1.2
 rbenv global 2.1.2
 
+# nvm and node(s)
+test -d ~/.nvm || curl https://raw.githubusercontent.com/creationix/nvm/v0.25.1/install.sh | zsh
+source ~/.zshrc
+nvm use 0.10 || nvm install 0.10
+nvm use 0.10
 
+# gvm and golang(s)
+test -d ~/.gvm || bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source ~/.zshrc
+gvm use go1.4rc2 || gvm install go1.4rc2
+gvm use go1.4rc2
