@@ -105,3 +105,6 @@ alias glola='git  log --graph --decorate --pretty=oneline --abbrev-commit'
 alias gr='git remote'
 alias grv='git remote -v'
 
+# paths for local installs of go packages and language versions
+export GOPATH="$HOME/.golang"
+export PATH="$PATH:$GOPATH/bin"
